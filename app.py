@@ -2,4 +2,16 @@ from flask import Flask
 from flask import Flask, request, make_response
 import os, json
 from flask_cors import CORS,cross_origin
-from weather_data import WeatherData
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Web App with Python Flask!'
+
+
+
+
+
+if __name__=='__main__':
+    app.run(host='127.0.0.1',port=8080)
